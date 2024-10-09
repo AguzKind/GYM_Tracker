@@ -15,10 +15,10 @@ imagenes mias, para ver mas detenidamente el progreso conseguido.
 > Este programa se encuentra en estado WIP.
 
 > [!IMPORTANT]
-- Visual C# (WinForms).
-- .NET Framework 4.7.2.
-- SQL Server (T-SQL).
-- Visual Studio 2022
+> - Visual C# (WinForms).
+> - .NET Framework 4.7.2.
+> - SQL Server (T-SQL).
+> - Visual Studio 2022
 
 > [!NOTE]
 > - Agregar funcionalidades faltantes.
