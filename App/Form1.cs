@@ -112,8 +112,18 @@ namespace App
 
         private void btn_subirContenido_Click(object sender, EventArgs e)
         {
+            int idx = 0;
+            string[] paths = new string[lbx_imagenes.Items.Count];
             AgregarEnBD("INSERT INTO Dias VALUES ('" + dtp_agregar.Text + "', '" + txt_peso.Text + "')");
-            // Falta agregar las imagenes y linkearlas al dia en la tabla intermedia.
+            LeerEnBD("SELECT TOP 1 DiaID FROM Dias ORDER BY DiaID DESC");
+            // Falta buscar el DiaID para relacionarlo con las imagenes
+            // Ver funcion LeerEnBD
+            for (int i=0; i <= lbx_imagenes.Items.Count - 1; i++)
+            {
+                paths[i] = lbx_imagenes.Items[i].ToString();
+                AgregarEnBD("INSERT INTO Imagenes (ImgPath, DiaID) VALUES ('" + paths[i] + "', '" + idx + "')");
+
+            }
         }
         public void AgregarEnBD(string query)
         {
@@ -130,6 +140,29 @@ namespace App
             {
                 MessageBox.Show("No se pudo guardar: " + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        public int LeerEnBD(string query)
+        {
+            int index = 0;
+            SqlConnection conexion = new SqlConnection(stringConexion);
+            try
+            {
+                conexion.Open();
+                SqlCommand Accion = new SqlCommand(query, conexion);
+                SqlDataReader lector = Accion.ExecuteReader();
+                while (lector.Read())
+                {
+                    index = Convert.ToInt16(lector["DiaID"].ToString());
+                }
+                conexion.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudo guardar: " + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return index;
         }
     }
 }
