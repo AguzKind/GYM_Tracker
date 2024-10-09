@@ -11,16 +11,16 @@ Entonces decidí combinar mi pasion con mi nuevo habito: Desarrollar un programa
 tener un seguimiento de mi trayectoria en este camino, con la funcionalidad de poder agregar
 imagenes mias, para ver mas detenidamente el progreso conseguido.
 
-> [!CAUTION]
+> [!WARNING]
 > Este programa se encuentra en estado WIP.
 
-# Tecnologías utilizadas:
+> [!IMPORTANT]
 - Visual C# (WinForms).
 - .NET Framework 4.7.2.
 - SQL Server (T-SQL).
 - Visual Studio 2022
 
-> [!INFORMATION]
+> [!NOTE]
 > - Agregar funcionalidades faltantes.
 > - Refactorizar el proyecto en modelo MVC.
 > - Implementar Validación.
