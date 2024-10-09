@@ -20,7 +20,7 @@ imagenes mias, para ver mas detenidamente el progreso conseguido.
 - SQL Server (T-SQL).
 - Visual Studio 2022
 
-> [!INFO]
+> [!INFORMATION]
 > - Agregar funcionalidades faltantes.
 > - Refactorizar el proyecto en modelo MVC.
 > - Implementar Validación.
