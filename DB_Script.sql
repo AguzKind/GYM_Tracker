@@ -32,3 +32,10 @@ DiaID INT,
 PRIMARY KEY (ImagenID),
 FOREIGN KEY (DiaID) REFERENCES Dias(DiaID)
 )
+
+-- Test
+DELETE FROM Dias
+
+SELECT * FROM Dias
+Select * FROM Imagenes
+-- Test
